@@ -22,7 +22,7 @@ class PositionEncoding(nn.Module):
     def __init__(self, d_model, max_len=1000, device=None):
         super(PositionEncoding, self).__init__()
         self.device = device
-        # torch.zeros(a,b): 0값을 가지느 a x b tensor를 생성
+        # torch.zeros(a,b): 0값을 가지는 a x b tensor를 생성
         self.positions_emb = torch.zeros(max_len, d_model)
         # torch.arange: array생성
         # unsqueeze(1): 지정한 dimension 자리에 size가 1인 빈 공간을 채워주면서 차원을 확장해준다
